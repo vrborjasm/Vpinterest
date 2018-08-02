@@ -1,0 +1,3248 @@
+Started GET "/" for 127.0.0.1 at 2018-08-01 14:27:49 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb (20.3ms)
+Completed 200 OK in 95ms (Views: 56.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (108.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (79.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePins (20180801182951)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "pins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "photo" varchar, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180801182951"]]
+  [1m[35m (78.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-08-01 18:37:10.766543"], ["updated_at", "2018-08-01 18:37:10.766543"]]
+  [1m[35m (43.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2018-08-01 14:40:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb (7.0ms)
+Completed 200 OK in 39ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-01 14:43:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (47.0ms)
+  Rendered share/_navbar.html.erb (3.3ms)
+Completed 200 OK in 3590ms (Views: 3561.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/Logo_Pinterest.png" for 127.0.0.1 at 2018-08-01 14:43:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo_Pinterest.png"):
+  
+actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/images/user.png" for 127.0.0.1 at 2018-08-01 14:43:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/user.png"):
+  
+actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered collection of /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [9 times] (38.8ms)
+  Rendered collection of /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [9 times] (8.2ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (40.8ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (36.8ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (291.3ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (313.1ms)
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-01 14:44:03 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (71.6ms)
+  Rendered pins/new.html.erb within layouts/application (74.0ms)
+  Rendered share/_navbar.html.erb (3.5ms)
+Completed 200 OK in 129ms (Views: 115.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/images/user.png" for 127.0.0.1 at 2018-08-01 14:44:03 -0400
+Started GET "/images/Logo_Pinterest.png" for 127.0.0.1 at 2018-08-01 14:44:03 -0400
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/user.png"):
+ActionController::RoutingError (No route matches [GET] "/images/Logo_Pinterest.png"):
+  
+  
+actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered collection of /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [9 times] (7.2ms)
+  Rendered collection of /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [9 times] (10.0ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.2ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (118.5ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (131.9ms)
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 14:44:09 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.6ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (3.4ms)
+  Rendered share/_navbar.html.erb (3.4ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/Logo_Pinterest.png" for 127.0.0.1 at 2018-08-01 14:44:09 -0400
+Started GET "/images/user.png" for 127.0.0.1 at 2018-08-01 14:44:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/Logo_Pinterest.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/user.png"):
+actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  
+actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered collection of /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [9 times] (10.5ms)
+  Rendered collection of /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [9 times] (6.5ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.8ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (131.9ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (131.6ms)
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 14:45:06 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.9ms)
+  Rendered share/_navbar.html.erb (117.9ms)
+Completed 200 OK in 279ms (Views: 276.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 14:46:19 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (3.1ms)
+  Rendered share/_navbar.html.erb (5.8ms)
+Completed 200 OK in 86ms (Views: 82.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 14:47:38 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (4.8ms)
+  Rendered share/_navbar.html.erb (5.4ms)
+Completed 200 OK in 178ms (Views: 174.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 14:47:50 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.3ms)
+  Rendered share/_navbar.html.erb (6.1ms)
+Completed 200 OK in 87ms (Views: 84.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-01 14:52:43 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (15.9ms)
+  Rendered share/_navbar.html.erb (3.4ms)
+Completed 200 OK in 594ms (Views: 567.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-01 14:52:47 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (31.2ms)
+  Rendered pins/new.html.erb within layouts/application (33.5ms)
+  Rendered share/_navbar.html.erb (3.6ms)
+Completed 200 OK in 90ms (Views: 74.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2018-08-01 14:53:48 -0400
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w1Alu6QjhhdObB+ezjAlwqMvkneXlKNnc7IebGUZvfYnXMCgpHeYNjgPCwTi/sl+nuRkPld241lewA74NVcUIg==", "pin"=>{"photo"=>"https://images-na.ssl-images-amazon.com/images/I/518XMQFtO-L._SX377_BO1,204,203,200_.jpg", "description"=>"Triforce"}, "commit"=>"Create Pin"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "pins" ("photo", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["photo", "https://images-na.ssl-images-amazon.com/images/I/518XMQFtO-L._SX377_BO1,204,203,200_.jpg"], ["description", "Triforce"], ["created_at", "2018-08-01 18:53:48.159251"], ["updated_at", "2018-08-01 18:53:48.159251"]]
+  [1m[35m (138.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins/1
+Completed 302 Found in 148ms (ActiveRecord: 139.2ms)
+
+
+Started GET "/pins/1" for 127.0.0.1 at 2018-08-01 14:53:48 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.0ms)
+  Rendered share/_navbar.html.erb (3.7ms)
+Completed 200 OK in 73ms (Views: 49.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 14:53:50 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (4.3ms)
+  Rendered share/_navbar.html.erb (3.7ms)
+Completed 200 OK in 56ms (Views: 52.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/1" for 127.0.0.1 at 2018-08-01 14:54:02 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.0ms)
+  Rendered share/_navbar.html.erb (3.9ms)
+Completed 200 OK in 61ms (Views: 57.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 14:54:30 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.7ms)
+  Rendered share/_navbar.html.erb (4.7ms)
+Completed 200 OK in 61ms (Views: 58.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/1" for 127.0.0.1 at 2018-08-01 14:54:32 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (1.6ms)
+  Rendered share/_navbar.html.erb (3.6ms)
+Completed 200 OK in 54ms (Views: 50.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 14:54:58 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (4.7ms)
+  Rendered share/_navbar.html.erb (4.1ms)
+Completed 200 OK in 63ms (Views: 60.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 14:58:34 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (4.9ms)
+  Rendered share/_navbar.html.erb (4.6ms)
+Completed 200 OK in 54ms (Views: 51.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 14:59:20 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (4.3ms)
+  Rendered share/_navbar.html.erb (4.1ms)
+Completed 200 OK in 56ms (Views: 52.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:02:35 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.1ms)
+  Rendered share/_navbar.html.erb (4.3ms)
+Completed 200 OK in 62ms (Views: 59.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-01 15:02:45 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (6.7ms)
+  Rendered pins/new.html.erb within layouts/application (9.5ms)
+  Rendered share/_navbar.html.erb (3.4ms)
+Completed 200 OK in 69ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2018-08-01 15:02:52 -0400
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gmf0OMxTT4cFsFZcz8003zdQQTUoJaos9OjNbxTPOcz+axEjzAdRpnPTQsbjA9hjCpu3fOjH6hLZmt37RIGQGA==", "pin"=>{"photo"=>"http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png", "description"=>"Cubone"}, "commit"=>"Create Pin"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "pins" ("photo", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["photo", "http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png"], ["description", "Cubone"], ["created_at", "2018-08-01 19:02:52.804635"], ["updated_at", "2018-08-01 19:02:52.804635"]]
+  [1m[35m (140.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins/2
+Completed 302 Found in 153ms (ActiveRecord: 141.4ms)
+
+
+Started GET "/pins/2" for 127.0.0.1 at 2018-08-01 15:02:52 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (1.9ms)
+  Rendered share/_navbar.html.erb (4.3ms)
+Completed 200 OK in 52ms (Views: 47.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:02:55 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.1ms)
+  Rendered share/_navbar.html.erb (3.7ms)
+Completed 200 OK in 55ms (Views: 52.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:04:09 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.6ms)
+  Rendered share/_navbar.html.erb (5.3ms)
+Completed 200 OK in 61ms (Views: 57.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:04:11 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.3ms)
+  Rendered share/_navbar.html.erb (4.6ms)
+Completed 200 OK in 57ms (Views: 53.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/pins/2" for 127.0.0.1 at 2018-08-01 15:04:24 -0400
+Processing by PinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"j5TvTI9Q4eThW7PZvqCSRTN6CMEpGZuHOyP2JXReZWFJByFdsJwMKzI0DkSXdX48JVAKifU63Ezg+heJHfvVMQ==", "id"=>"2"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.8ms)[0m  [1m[31mDELETE FROM "pins" WHERE "pins"."id" = ?[0m  [["id", 2]]
+  [1m[35m (78.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins
+Completed 302 Found in 95ms (ActiveRecord: 85.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:04:24 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (3.7ms)
+  Rendered share/_navbar.html.erb (4.5ms)
+Completed 200 OK in 59ms (Views: 55.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:04:30 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (4.2ms)
+  Rendered share/_navbar.html.erb (4.9ms)
+Completed 200 OK in 55ms (Views: 51.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-01 15:04:34 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (5.8ms)
+  Rendered pins/new.html.erb within layouts/application (8.4ms)
+  Rendered share/_navbar.html.erb (4.0ms)
+Completed 200 OK in 57ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2018-08-01 15:04:40 -0400
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eKCQOUYV17Oyw9D92K+cU98HXuf5//lnwbibW9ubEBqcrHUiRkHJksSgxGf0YXDv4syorjkduVnsyovPi9W5zg==", "pin"=>{"photo"=>"http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png", "description"=>"a"}, "commit"=>"Create Pin"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "pins" ("photo", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["photo", "http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png"], ["description", "a"], ["created_at", "2018-08-01 19:04:40.694742"], ["updated_at", "2018-08-01 19:04:40.694742"]]
+  [1m[35m (172.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins/3
+Completed 302 Found in 186ms (ActiveRecord: 174.3ms)
+
+
+Started GET "/pins/3" for 127.0.0.1 at 2018-08-01 15:04:40 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (1.7ms)
+  Rendered share/_navbar.html.erb (3.9ms)
+Completed 200 OK in 53ms (Views: 49.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:04:43 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (4.8ms)
+  Rendered share/_navbar.html.erb (4.0ms)
+Completed 200 OK in 55ms (Views: 52.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/pins/3" for 127.0.0.1 at 2018-08-01 15:05:23 -0400
+Processing by PinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FGh7XXigSpbvNd24Hg5EDgUOV54YaoedYeNmYPFRKqLS+7VMR2ynWTxaYCU326h3EyRV1sRJwFa6OofMmPSa8g==", "id"=>"3"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "pins" WHERE "pins"."id" = ?[0m  [["id", 3]]
+  [1m[35m (108.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins
+Completed 302 Found in 118ms (ActiveRecord: 109.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:05:24 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  Rendered pins/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/vicente/Desktop/pinterest/app/views/pins/index.html.erb:21: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/pins/index.html.erb:21: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.0ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.5ms)
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:05:45 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  Rendered pins/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/vicente/Desktop/pinterest/app/views/pins/index.html.erb:21: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/pins/index.html.erb:21: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.6ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.1ms)
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:06:00 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (4.9ms)
+  Rendered share/_navbar.html.erb (4.4ms)
+Completed 200 OK in 77ms (Views: 74.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:07:05 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (3.7ms)
+  Rendered share/_navbar.html.erb (4.9ms)
+Completed 200 OK in 56ms (Views: 53.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:07:08 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (4.9ms)
+  Rendered share/_navbar.html.erb (5.0ms)
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/pins/1" for 127.0.0.1 at 2018-08-01 15:07:13 -0400
+Processing by PinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MEJ0quazbOzX4kT9UrP4W9D5qSmvXtwtJzSmLOpcP8H20bq72X+BIwSN+WB7ZhQixtOrYXN9m+b87UeAg/mPkQ==", "id"=>"1"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[31mDELETE FROM "pins" WHERE "pins"."id" = ?[0m  [["id", 1]]
+  [1m[35m (119.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins
+Completed 302 Found in 129ms (ActiveRecord: 121.9ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:07:13 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (2.8ms)
+  Rendered share/_navbar.html.erb (4.6ms)
+Completed 200 OK in 55ms (Views: 52.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-01 15:07:15 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (5.2ms)
+  Rendered pins/new.html.erb within layouts/application (7.9ms)
+  Rendered share/_navbar.html.erb (4.1ms)
+Completed 200 OK in 59ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2018-08-01 15:07:19 -0400
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eWBfV13unlVVuHfOrrDvVCGKrykg8D1wQVAF9SFc26ydbLpMXbqAdCPbY1SCfgPoHEFZYOASfU5sIhVhcRJyeA==", "pin"=>{"photo"=>"http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png", "description"=>"1"}, "commit"=>"Create Pin"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "pins" ("photo", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["photo", "http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png"], ["description", "1"], ["created_at", "2018-08-01 19:07:19.268179"], ["updated_at", "2018-08-01 19:07:19.268179"]]
+  [1m[35m (180.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins/4
+Completed 302 Found in 191ms (ActiveRecord: 182.6ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-01 15:07:19 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (1.9ms)
+  Rendered share/_navbar.html.erb (3.8ms)
+Completed 200 OK in 49ms (Views: 45.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:07:22 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (4.3ms)
+  Rendered share/_navbar.html.erb (3.7ms)
+Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-01 15:07:27 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (5.9ms)
+  Rendered pins/new.html.erb within layouts/application (8.6ms)
+  Rendered share/_navbar.html.erb (3.7ms)
+Completed 200 OK in 57ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2018-08-01 15:07:34 -0400
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6EB3P37NaCBPXhNSHy0H+WWM6ztxfpTdDMZnqSqpx8QMTJIkfpl2ATk9B8gz4+tFWEcdcrGc1OMhtHc9euduEA==", "pin"=>{"photo"=>"http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png", "description"=>"2"}, "commit"=>"Create Pin"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "pins" ("photo", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["photo", "http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png"], ["description", "2"], ["created_at", "2018-08-01 19:07:34.456733"], ["updated_at", "2018-08-01 19:07:34.456733"]]
+  [1m[35m (177.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins/5
+Completed 302 Found in 190ms (ActiveRecord: 178.4ms)
+
+
+Started GET "/pins/5" for 127.0.0.1 at 2018-08-01 15:07:34 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (1.7ms)
+  Rendered share/_navbar.html.erb (4.1ms)
+Completed 200 OK in 50ms (Views: 46.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:07:36 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.1ms)
+  Rendered share/_navbar.html.erb (3.9ms)
+Completed 200 OK in 57ms (Views: 54.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:09:22 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (595.1ms)
+Completed 500 Internal Server Error in 601ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `img' for #<#<Class:0x00005580a5b52298>:0x00007f70a509d2c0>):
+     5: <% @pins.each do |pin| %>
+     6:   <div class="col-sm-3">
+     7:     <div class="img-thumbnail">
+     8:           <%= image_tag(pin.photo, :class => img-responsive) %>
+     9:           <%= pin.description %>
+    10:           <%= link_to 'Show', pin %>
+    11:           <%= link_to 'Edit', edit_pin_path(pin) %>
+  
+app/views/pins/index.html.erb:8:in `block in _app_views_pins_index_html_erb___4551202078088962958_70060890998340'
+app/views/pins/index.html.erb:5:in `_app_views_pins_index_html_erb___4551202078088962958_70060890998340'
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.9ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.6ms)
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:10:01 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.4ms)
+  Rendered share/_navbar.html.erb (5.0ms)
+Completed 200 OK in 68ms (Views: 64.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:10:45 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (4.9ms)
+  Rendered share/_navbar.html.erb (5.8ms)
+Completed 200 OK in 70ms (Views: 66.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:10:47 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.5ms)
+  Rendered share/_navbar.html.erb (5.4ms)
+Completed 200 OK in 91ms (Views: 87.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:13:22 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.7ms)
+  Rendered share/_navbar.html.erb (4.8ms)
+Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:13:24 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.6ms)
+  Rendered share/_navbar.html.erb (4.4ms)
+Completed 200 OK in 62ms (Views: 58.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:15:39 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.6ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.8ms)
+  Rendered share/_navbar.html.erb (5.0ms)
+Completed 200 OK in 60ms (Views: 56.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:17:18 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.9ms)
+  Rendered share/_navbar.html.erb (5.4ms)
+Completed 200 OK in 67ms (Views: 64.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-01 15:18:24 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (6.6ms)
+  Rendered pins/new.html.erb within layouts/application (9.4ms)
+  Rendered share/_navbar.html.erb (4.4ms)
+Completed 200 OK in 64ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2018-08-01 15:18:32 -0400
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P83FSz4shmcxhKIWppY9n9OeuOQ/3xXVdwUMPbL6UCrbwSBQPniYRkfntoyKWNEj7lVOrf89Vetadxyp4rT5/g==", "pin"=>{"photo"=>"http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png", "description"=>"3"}, "commit"=>"Create Pin"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "pins" ("photo", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["photo", "http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png"], ["description", "3"], ["created_at", "2018-08-01 19:18:32.266402"], ["updated_at", "2018-08-01 19:18:32.266402"]]
+  [1m[35m (175.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins/6
+Completed 302 Found in 193ms (ActiveRecord: 179.6ms)
+
+
+Started GET "/pins/6" for 127.0.0.1 at 2018-08-01 15:18:32 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.1ms)
+  Rendered share/_navbar.html.erb (5.1ms)
+Completed 200 OK in 77ms (Views: 72.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:18:34 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (7.5ms)
+  Rendered share/_navbar.html.erb (5.8ms)
+Completed 200 OK in 70ms (Views: 67.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-01 15:18:37 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (5.8ms)
+  Rendered pins/new.html.erb within layouts/application (8.2ms)
+  Rendered share/_navbar.html.erb (5.4ms)
+Completed 200 OK in 63ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2018-08-01 15:18:47 -0400
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hr8fzoI+pVrflJPg8uBmH07Z7d8Jd4hUJkhb3fKpH1X6s/rVgmq7e6n3h3reLoqjcxIblsmVyGoLOktJoue2gQ==", "pin"=>{"photo"=>"http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png", "description"=>"4"}, "commit"=>"Create Pin"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.9ms)[0m  [1m[32mINSERT INTO "pins" ("photo", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["photo", "http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png"], ["description", "4"], ["created_at", "2018-08-01 19:18:47.538020"], ["updated_at", "2018-08-01 19:18:47.538020"]]
+  [1m[35m (180.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins/7
+Completed 302 Found in 196ms (ActiveRecord: 184.6ms)
+
+
+Started GET "/pins/7" for 127.0.0.1 at 2018-08-01 15:18:47 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (1.7ms)
+  Rendered share/_navbar.html.erb (5.2ms)
+Completed 200 OK in 58ms (Views: 55.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:18:49 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (7.9ms)
+  Rendered share/_navbar.html.erb (4.6ms)
+Completed 200 OK in 66ms (Views: 62.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:20:06 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (8.1ms)
+  Rendered share/_navbar.html.erb (5.0ms)
+Completed 200 OK in 94ms (Views: 91.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:30:34 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.6ms)
+  Rendered share/_navbar.html.erb (4.8ms)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:32:02 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (7.1ms)
+  Rendered share/_navbar.html.erb (4.4ms)
+Completed 200 OK in 59ms (Views: 56.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:33:13 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  Rendered pins/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/vicente/Desktop/pinterest/app/views/pins/index.html.erb:14: syntax error, unexpected '<'
+...ut_buffer.append=( link_to <i></i>, pin );@output_buffer.saf...
+...                              ^
+/home/vicente/Desktop/pinterest/app/views/pins/index.html.erb:17: unknown regexp options - dv
+/home/vicente/Desktop/pinterest/app/views/pins/index.html.erb:17: unmatched close parenthesis: /i>, pin );@output_buffer.safe_append='
+                '.freeze;@output_buffer.append=( link_to 'Edit', edit_pin_path(pin) );@output_buffer.safe_append='
+                '.freeze;@output_buffer.append=( link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } );@output_buffer.safe_append='
+              </i
+/home/vicente/Desktop/pinterest/app/views/pins/index.html.erb:18: syntax error, unexpected '<'
+        </div>
+        ^
+/home/vicente/Desktop/pinterest/app/views/pins/index.html.erb:19: unknown regexp options - dv
+/home/vicente/Desktop/pinterest/app/views/pins/index.html.erb:25: unknown regexp options - dv
+/home/vicente/Desktop/pinterest/app/views/pins/index.html.erb:28: unterminated string meets end of file
+          end
+             ^
+/home/vicente/Desktop/pinterest/app/views/pins/index.html.erb:28: syntax error, unexpected end-of-input, expecting ')'
+          end
+             ^):
+  
+app/views/pins/index.html.erb:14: syntax error, unexpected '<'
+app/views/pins/index.html.erb:17: unknown regexp options - dv
+app/views/pins/index.html.erb:17: unmatched close parenthesis: /i>, pin );@output_buffer.safe_append='
+app/views/pins/index.html.erb:18: syntax error, unexpected '<'
+app/views/pins/index.html.erb:19: unknown regexp options - dv
+app/views/pins/index.html.erb:25: unknown regexp options - dv
+app/views/pins/index.html.erb:28: unterminated string meets end of file
+app/views/pins/index.html.erb:28: syntax error, unexpected end-of-input, expecting ')'
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.8ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.9ms)
+Started GET "/pins/7" for 127.0.0.1 at 2018-08-01 15:36:51 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.5ms)
+  Rendered share/_navbar.html.erb (4.9ms)
+Completed 200 OK in 70ms (Views: 65.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:36:54 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  Rendered pins/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/vicente/Desktop/pinterest/app/views/pins/index.html.erb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+...append=( link_to "<i class="far fa-eye"></i>", pin );@output...
+...                            ^~~
+/home/vicente/Desktop/pinterest/app/views/pins/index.html.erb:14: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... link_to "<i class="far fa-eye"></i>", pin );@output_buffer....
+...                              ^
+/home/vicente/Desktop/pinterest/app/views/pins/index.html.erb:14: syntax error, unexpected ',', expecting ')'
+...o "<i class="far fa-eye"></i>", pin );@output_buffer.safe_ap...
+...                              ^):
+  
+app/views/pins/index.html.erb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/pins/index.html.erb:14: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/pins/index.html.erb:14: syntax error, unexpected ',', expecting ')'
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.3ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.7ms)
+Started GET "/" for 127.0.0.1 at 2018-08-01 15:37:01 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  Rendered pins/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/vicente/Desktop/pinterest/app/views/pins/index.html.erb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+...append=( link_to "<i class="far fa-eye"></i>", pin );@output...
+...                            ^~~
+/home/vicente/Desktop/pinterest/app/views/pins/index.html.erb:14: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... link_to "<i class="far fa-eye"></i>", pin );@output_buffer....
+...                              ^
+/home/vicente/Desktop/pinterest/app/views/pins/index.html.erb:14: syntax error, unexpected ',', expecting ')'
+...o "<i class="far fa-eye"></i>", pin );@output_buffer.safe_ap...
+...                              ^):
+  
+app/views/pins/index.html.erb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/pins/index.html.erb:14: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/pins/index.html.erb:14: syntax error, unexpected ',', expecting ')'
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.8ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.5ms)
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:37:41 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.6ms)
+  Rendered share/_navbar.html.erb (4.9ms)
+Completed 200 OK in 69ms (Views: 66.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-01 15:37:52 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (1.9ms)
+  Rendered share/_navbar.html.erb (3.8ms)
+Completed 200 OK in 57ms (Views: 53.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:37:53 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.6ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (9.6ms)
+  Rendered share/_navbar.html.erb (4.6ms)
+Completed 200 OK in 70ms (Views: 67.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-01 15:38:20 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.9ms)
+  Rendered share/_navbar.html.erb (5.8ms)
+Completed 200 OK in 64ms (Views: 61.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-01 15:40:57 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.3ms)
+  Rendered share/_navbar.html.erb (5.2ms)
+Completed 200 OK in 65ms (Views: 62.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-01 15:44:52 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (7.0ms)
+  Rendered share/_navbar.html.erb (5.0ms)
+Completed 200 OK in 67ms (Views: 64.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-01 15:44:58 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.1ms)
+  Rendered share/_navbar.html.erb (3.8ms)
+Completed 200 OK in 56ms (Views: 52.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:44:59 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (7.2ms)
+  Rendered share/_navbar.html.erb (3.4ms)
+Completed 200 OK in 71ms (Views: 68.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:45:17 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.6ms)
+  Rendered share/_navbar.html.erb (5.2ms)
+Completed 200 OK in 66ms (Views: 63.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:46:09 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.8ms)
+  Rendered share/_navbar.html.erb (5.7ms)
+Completed 200 OK in 59ms (Views: 55.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:48:05 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (7.9ms)
+  Rendered share/_navbar.html.erb (4.8ms)
+Completed 200 OK in 66ms (Views: 63.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:49:24 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (7.0ms)
+  Rendered share/_navbar.html.erb (4.8ms)
+Completed 200 OK in 61ms (Views: 57.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-01 15:49:26 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.0ms)
+  Rendered share/_navbar.html.erb (5.8ms)
+Completed 200 OK in 64ms (Views: 59.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:49:28 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (7.7ms)
+  Rendered share/_navbar.html.erb (4.5ms)
+Completed 200 OK in 67ms (Views: 63.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-01 15:49:32 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (6.8ms)
+  Rendered pins/edit.html.erb within layouts/application (10.0ms)
+  Rendered share/_navbar.html.erb (4.8ms)
+Completed 200 OK in 69ms (Views: 65.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:49:33 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (7.9ms)
+  Rendered share/_navbar.html.erb (4.7ms)
+Completed 200 OK in 68ms (Views: 65.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/pins/5" for 127.0.0.1 at 2018-08-01 15:49:38 -0400
+Processing by PinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lllLuRip39WSkJeJNSR2LpYW8Hqt1A2BL+mj+LfuVJZQyoWoJ2UyGkH/KhQc8ZpXgDzyMnH3Skr0MEJU3kvkxg==", "id"=>"5"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[31mDELETE FROM "pins" WHERE "pins"."id" = ?[0m  [["id", 5]]
+  [1m[35m (127.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins
+Completed 302 Found in 141ms (ActiveRecord: 132.1ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:49:38 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.8ms)
+  Rendered share/_navbar.html.erb (4.5ms)
+Completed 200 OK in 59ms (Views: 55.6ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/pins/6" for 127.0.0.1 at 2018-08-01 15:49:46 -0400
+Processing by PinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ag9pkYZfcy1VsUI2/ifK5l5wC4PQCa/D5xGW8axKlUOsnKeAuZOe4obe/6vX8iafSFoJywwq6Ag8yHddxe8lEw==", "id"=>"6"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[31mDELETE FROM "pins" WHERE "pins"."id" = ?[0m  [["id", 6]]
+  [1m[35m (87.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins
+Completed 302 Found in 100ms (ActiveRecord: 90.6ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:49:47 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.6ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (7.3ms)
+  Rendered share/_navbar.html.erb (5.9ms)
+Completed 200 OK in 68ms (Views: 65.5ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/pins/7" for 127.0.0.1 at 2018-08-01 15:49:49 -0400
+Processing by PinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9M7TGYCKmeUs7yDq6dx4CvOjyrkY3LqXkXpTs0TnQA4yXR0Iv0Z0Kv+AnXfACZRz5YnI8cT//VxKo7IfLULwXg==", "id"=>"7"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[31mDELETE FROM "pins" WHERE "pins"."id" = ?[0m  [["id", 7]]
+  [1m[35m (87.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins
+Completed 302 Found in 98ms (ActiveRecord: 89.5ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:49:50 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.7ms)
+  Rendered share/_navbar.html.erb (5.8ms)
+Completed 200 OK in 79ms (Views: 75.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-01 15:51:05 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.7ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (6.8ms)
+  Rendered pins/edit.html.erb within layouts/application (10.0ms)
+  Rendered share/_navbar.html.erb (5.0ms)
+Completed 200 OK in 76ms (Views: 70.7ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/pins/4" for 127.0.0.1 at 2018-08-01 15:51:10 -0400
+Processing by PinsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gkd4L4JWPsg71eCHtXDEUbiTrM3S4v3t+hPwqlt6wjwYQbUQzltMrkSpm81reryo/aGHz5j313ZKvUnq72skPg==", "pin"=>{"photo"=>"http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png", "description"=>"Because it never removes its skull helmet, no one has ever seen this Pokémon's real face."}, "commit"=>"Update Pin", "id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (6.3ms)[0m  [1m[33mUPDATE "pins" SET "description" = ?, "updated_at" = ? WHERE "pins"."id" = ?[0m  [["description", "Because it never removes its skull helmet, no one has ever seen this Pokémon's real face."], ["updated_at", "2018-08-01 19:51:10.851918"], ["id", 4]]
+  [1m[35m (271.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins/4
+Completed 302 Found in 293ms (ActiveRecord: 278.0ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-01 15:51:11 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.0ms)
+  Rendered share/_navbar.html.erb (5.6ms)
+Completed 200 OK in 54ms (Views: 51.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:51:14 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.9ms)
+  Rendered share/_navbar.html.erb (5.5ms)
+Completed 200 OK in 64ms (Views: 61.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:52:37 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.3ms)
+  Rendered share/_navbar.html.erb (5.5ms)
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:52:38 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.7ms)
+  Rendered share/_navbar.html.erb (5.2ms)
+Completed 200 OK in 65ms (Views: 62.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:57:35 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (8.7ms)
+  Rendered share/_navbar.html.erb (4.4ms)
+Completed 200 OK in 63ms (Views: 60.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-01 15:58:56 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (5.7ms)
+  Rendered pins/new.html.erb within layouts/application (8.7ms)
+  Rendered share/_navbar.html.erb (4.4ms)
+Completed 200 OK in 62ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2018-08-01 15:59:07 -0400
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6kVIXgOKKEEZ0j7cCvTnzsIck8o9DV+83cA9wIFHXxcOSa1FA942YG+xKkYmOgty/9dlg/3vH4Lwsi1U0Qn2ww==", "pin"=>{"photo"=>"https://images-na.ssl-images-amazon.com/images/I/518XMQFtO-L._SX377_BO1,204,203,200_.jpg", "description"=>"Triforce"}, "commit"=>"Create Pin"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "pins" ("photo", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["photo", "https://images-na.ssl-images-amazon.com/images/I/518XMQFtO-L._SX377_BO1,204,203,200_.jpg"], ["description", "Triforce"], ["created_at", "2018-08-01 19:59:07.567126"], ["updated_at", "2018-08-01 19:59:07.567126"]]
+  [1m[35m (149.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins/8
+Completed 302 Found in 162ms (ActiveRecord: 150.6ms)
+
+
+Started GET "/pins/8" for 127.0.0.1 at 2018-08-01 15:59:07 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.4ms)
+  Rendered share/_navbar.html.erb (4.7ms)
+Completed 200 OK in 56ms (Views: 52.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:59:11 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.5ms)
+  Rendered share/_navbar.html.erb (3.9ms)
+Completed 200 OK in 58ms (Views: 55.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-01 15:59:35 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (6.1ms)
+  Rendered pins/new.html.erb within layouts/application (8.9ms)
+  Rendered share/_navbar.html.erb (3.9ms)
+Completed 200 OK in 75ms (Views: 72.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 15:59:39 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.1ms)
+  Rendered share/_navbar.html.erb (4.6ms)
+Completed 200 OK in 68ms (Views: 64.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 16:01:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (1.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (42.3ms)
+  Rendered share/_navbar.html.erb (4.6ms)
+Completed 200 OK in 561ms (Views: 525.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/pins/8/edit" for 127.0.0.1 at 2018-08-01 16:43:17 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPin Load (0.9ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (39.6ms)
+  Rendered pins/edit.html.erb within layouts/application (42.6ms)
+  Rendered share/_navbar.html.erb (5.9ms)
+Completed 200 OK in 108ms (Views: 98.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 16:43:21 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.1ms)
+  Rendered share/_navbar.html.erb (3.7ms)
+Completed 200 OK in 70ms (Views: 66.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pins/8/edit" for 127.0.0.1 at 2018-08-01 16:43:23 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (7.0ms)
+  Rendered pins/edit.html.erb within layouts/application (11.3ms)
+  Rendered share/_navbar.html.erb (3.7ms)
+Completed 200 OK in 66ms (Views: 62.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/8" for 127.0.0.1 at 2018-08-01 16:43:25 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.1ms)
+  Rendered share/_navbar.html.erb (3.6ms)
+Completed 200 OK in 55ms (Views: 51.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-01 16:43:29 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (2.0ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (8.2ms)
+  Rendered share/_navbar.html.erb (4.5ms)
+Completed 200 OK in 67ms (Views: 63.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/pins/8/edit" for 127.0.0.1 at 2018-08-01 16:43:43 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (6.3ms)
+  Rendered pins/edit.html.erb within layouts/application (9.2ms)
+  Rendered share/_navbar.html.erb (3.8ms)
+Completed 200 OK in 63ms (Views: 60.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/8" for 127.0.0.1 at 2018-08-01 16:43:46 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.3ms)
+  Rendered share/_navbar.html.erb (4.4ms)
+Completed 200 OK in 65ms (Views: 61.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-02 09:17:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.6ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (57.2ms)
+  Rendered share/_navbar.html.erb (3.4ms)
+Completed 200 OK in 753ms (Views: 705.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 09:17:16 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (1.1ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.0ms)
+  Rendered share/_navbar.html.erb (4.1ms)
+Completed 200 OK in 75ms (Views: 51.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 09:17:22 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (120.3ms)
+  Rendered pins/edit.html.erb within layouts/application (136.0ms)
+  Rendered share/_navbar.html.erb (3.5ms)
+Completed 200 OK in 182ms (Views: 177.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 09:23:53 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (5.7ms)
+  Rendered pins/new.html.erb within layouts/application (8.5ms)
+  Rendered share/_navbar.html.erb (5.2ms)
+Completed 200 OK in 132ms (Views: 66.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2018-08-02 09:24:08 -0400
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fqDn5/noNge8zMkteqPkaMnGbSn/Lw49pAeeglCH4QW8wkd/1aO+Kn179vJmx9nWXoSKLJX1r67qKKsp8CgHaA==", "pin"=>{"photo"=>"", "description"=>""}, "commit"=>"Create Pin"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (5.1ms)
+  Rendered pins/new.html.erb within layouts/application (7.2ms)
+  Rendered share/_navbar.html.erb (3.7ms)
+Completed 200 OK in 57ms (Views: 50.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 09:24:43 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.7ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (17.3ms)
+  Rendered share/_navbar.html.erb (4.2ms)
+Completed 200 OK in 70ms (Views: 61.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 09:24:46 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (5.5ms)
+  Rendered pins/new.html.erb within layouts/application (7.8ms)
+  Rendered share/_navbar.html.erb (3.5ms)
+Completed 200 OK in 55ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2018-08-02 09:24:50 -0400
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D6vLdLMSX1aLsoULS3in+aQV6Di+NRPj/JzjmqtWgKfNyWvsn1nXe0oFutRXHJpHM1cPPdTvsnCys9YxC/lmyg==", "pin"=>{"photo"=>"", "description"=>""}, "commit"=>"Create Pin"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (5.8ms)
+  Rendered pins/new.html.erb within layouts/application (8.7ms)
+  Rendered share/_navbar.html.erb (3.8ms)
+Completed 200 OK in 59ms (Views: 50.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 09:24:55 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.8ms)
+  Rendered share/_navbar.html.erb (3.4ms)
+Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-02 09:24:59 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.7ms)
+  Rendered share/_navbar.html.erb (4.1ms)
+Completed 200 OK in 66ms (Views: 63.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 09:25:02 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (6.7ms)
+  Rendered pins/new.html.erb within layouts/application (9.2ms)
+  Rendered share/_navbar.html.erb (3.4ms)
+Completed 200 OK in 69ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 09:25:09 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.8ms)
+  Rendered share/_navbar.html.erb (3.5ms)
+Completed 200 OK in 51ms (Views: 48.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 09:31:32 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.8ms)
+  Rendered share/_navbar.html.erb (4.5ms)
+Completed 200 OK in 137ms (Views: 134.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 09:32:14 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.5ms)
+  Rendered share/_navbar.html.erb (4.9ms)
+Completed 200 OK in 81ms (Views: 78.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 09:49:07 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.4ms)
+  Rendered share/_navbar.html.erb (3.8ms)
+Completed 200 OK in 54ms (Views: 51.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 09:49:10 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.1ms)
+  Rendered share/_navbar.html.erb (3.6ms)
+Completed 200 OK in 58ms (Views: 52.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 09:54:48 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.5ms)
+  Rendered share/_navbar.html.erb (4.0ms)
+Completed 200 OK in 53ms (Views: 49.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 09:54:57 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.0ms)
+  Rendered share/_navbar.html.erb (3.9ms)
+Completed 200 OK in 61ms (Views: 57.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 09:55:00 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.4ms)
+  Rendered share/_navbar.html.erb (4.2ms)
+Completed 200 OK in 62ms (Views: 58.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 09:55:20 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (1.8ms)
+  Rendered share/_navbar.html.erb (3.7ms)
+Completed 200 OK in 50ms (Views: 46.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 09:56:31 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.0ms)
+  Rendered share/_navbar.html.erb (3.8ms)
+Completed 200 OK in 54ms (Views: 49.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 09:57:09 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (4.6ms)
+  Rendered share/_navbar.html.erb (4.1ms)
+Completed 200 OK in 68ms (Views: 64.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 09:57:44 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (1.9ms)
+  Rendered share/_navbar.html.erb (4.4ms)
+Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 09:59:25 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (1.9ms)
+  Rendered share/_navbar.html.erb (4.8ms)
+Completed 200 OK in 55ms (Views: 50.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 10:00:24 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.1ms)
+  Rendered share/_navbar.html.erb (4.5ms)
+Completed 200 OK in 49ms (Views: 44.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 10:00:57 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.4ms)
+  Rendered share/_navbar.html.erb (5.0ms)
+Completed 200 OK in 56ms (Views: 51.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 10:02:20 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.3ms)
+  Rendered share/_navbar.html.erb (4.4ms)
+Completed 200 OK in 53ms (Views: 49.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 10:02:52 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (1.9ms)
+  Rendered share/_navbar.html.erb (3.7ms)
+Completed 200 OK in 54ms (Views: 50.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 10:04:50 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.2ms)
+  Rendered share/_navbar.html.erb (4.3ms)
+Completed 200 OK in 53ms (Views: 49.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 10:04:51 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.1ms)
+  Rendered share/_navbar.html.erb (4.3ms)
+Completed 200 OK in 55ms (Views: 50.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 10:05:07 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.3ms)
+  Rendered share/_navbar.html.erb (5.0ms)
+Completed 200 OK in 55ms (Views: 50.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 10:05:09 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.1ms)
+  Rendered share/_navbar.html.erb (5.0ms)
+Completed 200 OK in 58ms (Views: 54.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 10:06:45 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.5ms)
+  Rendered share/_navbar.html.erb (3.8ms)
+Completed 200 OK in 56ms (Views: 52.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 10:08:10 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.2ms)
+  Rendered share/_navbar.html.erb (4.7ms)
+Completed 200 OK in 66ms (Views: 61.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 10:14:42 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/vicente/Desktop/pinterest/app/views/pins/show.html.erb:17: syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                            ^~~
+/home/vicente/Desktop/pinterest/app/views/pins/show.html.erb:20: syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                            ^~~
+/home/vicente/Desktop/pinterest/app/views/pins/show.html.erb:27: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/vicente/Desktop/pinterest/app/views/pins/show.html.erb:29: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/pins/show.html.erb:17: syntax error, unexpected keyword_end
+app/views/pins/show.html.erb:20: syntax error, unexpected keyword_end
+app/views/pins/show.html.erb:27: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/pins/show.html.erb:29: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.4ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.0ms)
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 10:15:18 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.2ms)
+  Rendered share/_navbar.html.erb (4.7ms)
+Completed 200 OK in 54ms (Views: 49.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 10:15:23 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.1ms)
+  Rendered share/_navbar.html.erb (4.7ms)
+Completed 200 OK in 58ms (Views: 54.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 10:15:25 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (3.1ms)
+  Rendered share/_navbar.html.erb (5.2ms)
+Completed 200 OK in 61ms (Views: 57.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 10:15:27 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (8.0ms)
+  Rendered pins/edit.html.erb within layouts/application (11.2ms)
+  Rendered share/_navbar.html.erb (4.0ms)
+Completed 200 OK in 76ms (Views: 72.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 10:15:29 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.4ms)
+  Rendered share/_navbar.html.erb (3.9ms)
+Completed 200 OK in 62ms (Views: 59.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 10:16:19 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.7ms)
+  Rendered share/_navbar.html.erb (4.8ms)
+Completed 200 OK in 55ms (Views: 51.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 10:16:21 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.9ms)
+  Rendered share/_navbar.html.erb (5.0ms)
+Completed 200 OK in 60ms (Views: 57.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 10:16:54 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.5ms)
+  Rendered share/_navbar.html.erb (3.6ms)
+Completed 200 OK in 58ms (Views: 54.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 10:17:25 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (6.3ms)
+  Rendered pins/edit.html.erb within layouts/application (9.6ms)
+  Rendered share/_navbar.html.erb (3.5ms)
+Completed 200 OK in 57ms (Views: 53.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 10:17:28 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.0ms)
+  Rendered share/_navbar.html.erb (3.7ms)
+Completed 200 OK in 52ms (Views: 49.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 10:17:32 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.6ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.7ms)
+  Rendered share/_navbar.html.erb (5.0ms)
+Completed 200 OK in 62ms (Views: 57.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 10:38:31 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (6.7ms)
+  Rendered pins/edit.html.erb within layouts/application (10.1ms)
+  Rendered share/_navbar.html.erb (4.3ms)
+Completed 200 OK in 65ms (Views: 61.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 10:38:35 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.6ms)
+  Rendered share/_navbar.html.erb (3.6ms)
+Completed 200 OK in 61ms (Views: 58.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 10:38:38 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (8.4ms)
+  Rendered pins/new.html.erb within layouts/application (11.2ms)
+  Rendered share/_navbar.html.erb (3.6ms)
+Completed 200 OK in 58ms (Views: 55.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 10:39:40 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (5.3ms)
+  Rendered pins/new.html.erb within layouts/application (7.8ms)
+  Rendered share/_navbar.html.erb (4.7ms)
+Completed 200 OK in 67ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 10:41:23 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (5.0ms)
+  Rendered pins/new.html.erb within layouts/application (7.4ms)
+  Rendered share/_navbar.html.erb (4.4ms)
+Completed 200 OK in 57ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 10:43:15 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (5.2ms)
+  Rendered pins/new.html.erb within layouts/application (7.6ms)
+  Rendered share/_navbar.html.erb (4.7ms)
+Completed 200 OK in 57ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 10:43:18 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (5.9ms)
+  Rendered pins/new.html.erb within layouts/application (8.7ms)
+  Rendered share/_navbar.html.erb (4.3ms)
+Completed 200 OK in 58ms (Views: 55.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 10:46:01 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (6.0ms)
+  Rendered pins/new.html.erb within layouts/application (8.5ms)
+  Rendered share/_navbar.html.erb (3.8ms)
+Completed 200 OK in 62ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2018-08-02 10:46:10 -0400
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z8y5r+DkWwaWSealLYAwq0V7BqiwH5zDbaizr/mW3Cq4XClWbHdlMqcsd0+/iusTB7D3rpm+EocBm75HCJN3Yw==", "pin"=>{"photo"=>"http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png", "description"=>"Cubone"}, "button"=>""}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "pins" ("photo", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["photo", "http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png"], ["description", "Cubone"], ["created_at", "2018-08-02 14:46:10.017664"], ["updated_at", "2018-08-02 14:46:10.017664"]]
+  [1m[35m (147.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins/9
+Completed 302 Found in 160ms (ActiveRecord: 148.0ms)
+
+
+Started GET "/pins/9" for 127.0.0.1 at 2018-08-02 10:46:10 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.3ms)
+  Rendered share/_navbar.html.erb (4.1ms)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 10:46:14 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.7ms)
+  Rendered share/_navbar.html.erb (3.6ms)
+Completed 200 OK in 60ms (Views: 56.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 10:47:08 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.6ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (7.2ms)
+  Rendered share/_navbar.html.erb (4.2ms)
+Completed 200 OK in 59ms (Views: 55.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 10:47:10 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (7.1ms)
+  Rendered pins/edit.html.erb within layouts/application (10.2ms)
+  Rendered share/_navbar.html.erb (3.6ms)
+Completed 200 OK in 66ms (Views: 61.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/pins/4" for 127.0.0.1 at 2018-08-02 10:47:14 -0400
+Processing by PinsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ffsgj48ytDdZQChAY/ZSd/37TCbphZB7O+HX7bjRGfRTade3jeVVyb5cQE0K6MKwsKAbgJbYKdjWHgikaO6Oug==", "pin"=>{"photo"=>"http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png", "description"=>"Because it never removes its skull helmet, no one has ever seen this Pokémon's real face."}, "button"=>"", "id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins/4
+Completed 302 Found in 9ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 10:47:14 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.2ms)
+  Rendered share/_navbar.html.erb (3.7ms)
+Completed 200 OK in 52ms (Views: 48.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 10:52:45 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (7.4ms)
+  Rendered pins/edit.html.erb within layouts/application (10.5ms)
+  Rendered share/_navbar.html.erb (4.7ms)
+Completed 200 OK in 65ms (Views: 61.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 10:53:13 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (5.8ms)
+  Rendered pins/edit.html.erb within layouts/application (8.7ms)
+  Rendered share/_navbar.html.erb (5.0ms)
+Completed 200 OK in 62ms (Views: 57.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 10:53:15 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (6.1ms)
+  Rendered pins/edit.html.erb within layouts/application (8.9ms)
+  Rendered share/_navbar.html.erb (3.7ms)
+Completed 200 OK in 60ms (Views: 55.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 10:53:23 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (7.2ms)
+  Rendered pins/edit.html.erb within layouts/application (10.6ms)
+  Rendered share/_navbar.html.erb (3.9ms)
+Completed 200 OK in 63ms (Views: 59.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 10:57:09 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (6.3ms)
+  Rendered pins/edit.html.erb within layouts/application (9.4ms)
+  Rendered share/_navbar.html.erb (3.7ms)
+Completed 200 OK in 57ms (Views: 53.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 10:58:27 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (5.3ms)
+  Rendered pins/edit.html.erb within layouts/application (8.2ms)
+  Rendered share/_navbar.html.erb (4.7ms)
+Completed 200 OK in 60ms (Views: 55.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 10:59:10 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (8.2ms)
+  Rendered pins/edit.html.erb within layouts/application (10.9ms)
+  Rendered share/_navbar.html.erb (4.2ms)
+Completed 200 OK in 62ms (Views: 57.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 10:59:12 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (5.9ms)
+  Rendered pins/edit.html.erb within layouts/application (9.2ms)
+  Rendered share/_navbar.html.erb (3.9ms)
+Completed 200 OK in 60ms (Views: 55.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 11:00:59 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (7.0ms)
+  Rendered pins/edit.html.erb within layouts/application (10.9ms)
+  Rendered share/_navbar.html.erb (3.7ms)
+Completed 200 OK in 63ms (Views: 59.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 11:02:31 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (5.8ms)
+  Rendered pins/edit.html.erb within layouts/application (8.8ms)
+  Rendered share/_navbar.html.erb (4.2ms)
+Completed 200 OK in 60ms (Views: 56.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 11:04:58 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (8.4ms)
+  Rendered pins/edit.html.erb within layouts/application (11.4ms)
+  Rendered share/_navbar.html.erb (3.8ms)
+Completed 200 OK in 63ms (Views: 59.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 11:05:23 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (8.1ms)
+  Rendered pins/edit.html.erb within layouts/application (11.3ms)
+  Rendered share/_navbar.html.erb (4.4ms)
+Completed 200 OK in 79ms (Views: 75.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 11:05:40 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (6.1ms)
+  Rendered pins/edit.html.erb within layouts/application (9.0ms)
+  Rendered share/_navbar.html.erb (4.9ms)
+Completed 200 OK in 64ms (Views: 59.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 11:07:57 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (4.7ms)
+  Rendered pins/edit.html.erb within layouts/application (7.5ms)
+  Rendered share/_navbar.html.erb (4.4ms)
+Completed 200 OK in 62ms (Views: 58.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 11:09:07 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (7.2ms)
+  Rendered pins/edit.html.erb within layouts/application (10.4ms)
+  Rendered share/_navbar.html.erb (4.3ms)
+Completed 200 OK in 61ms (Views: 57.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 11:16:57 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (5.1ms)
+  Rendered pins/edit.html.erb within layouts/application (7.4ms)
+  Rendered share/_navbar.html.erb (4.1ms)
+Completed 200 OK in 58ms (Views: 53.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 11:17:33 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (8.1ms)
+  Rendered pins/edit.html.erb within layouts/application (11.4ms)
+  Rendered share/_navbar.html.erb (5.2ms)
+Completed 200 OK in 65ms (Views: 61.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 11:17:55 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (8.3ms)
+  Rendered pins/edit.html.erb within layouts/application (11.4ms)
+  Rendered share/_navbar.html.erb (3.7ms)
+Completed 200 OK in 63ms (Views: 59.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 11:18:10 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (8.0ms)
+  Rendered pins/edit.html.erb within layouts/application (11.1ms)
+  Rendered share/_navbar.html.erb (5.0ms)
+Completed 200 OK in 63ms (Views: 59.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 11:18:28 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (7.9ms)
+  Rendered pins/edit.html.erb within layouts/application (11.5ms)
+  Rendered share/_navbar.html.erb (4.9ms)
+Completed 200 OK in 64ms (Views: 59.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 11:18:52 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_form.html.erb (8.6ms)
+  Rendered pins/edit.html.erb within layouts/application (11.7ms)
+  Rendered share/_navbar.html.erb (5.0ms)
+Completed 200 OK in 66ms (Views: 61.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/pins/4" for 127.0.0.1 at 2018-08-02 11:19:01 -0400
+Processing by PinsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uduWBo8U5SMStZemwP96m+q2fcvWW5Hqmkj4OfvGeHlmSwb/A4fbFyPQBkxS9aEjqH2Mzf/6H672e/XRCsPTMA==", "pin"=>{"photo"=>"http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png", "description"=>"Because it never removes its skull helmet, no one has ever seen this Pokémon's real face."}, "commit"=>"conceal", "id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins/4
+Completed 302 Found in 8ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 11:19:01 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.7ms)
+  Rendered share/_navbar.html.erb (18.3ms)
+Completed 200 OK in 79ms (Views: 74.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 11:19:04 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (7.3ms)
+  Rendered share/_navbar.html.erb (3.5ms)
+Completed 200 OK in 60ms (Views: 56.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 11:19:11 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (6.2ms)
+  Rendered pins/new.html.erb within layouts/application (9.4ms)
+  Rendered share/_navbar.html.erb (3.7ms)
+Completed 200 OK in 56ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 11:19:52 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (7.5ms)
+  Rendered pins/new.html.erb within layouts/application (10.3ms)
+  Rendered share/_navbar.html.erb (3.5ms)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2018-08-02 11:20:12 -0400
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bb8gIZoAlfCynFY/JcxfzFxvlGk93PRJY5a379n89sqyL7DYFpOrxIP5x9W3xoR0HqRlbxR9eg0PpboHKPldgw==", "pin"=>{"photo"=>"http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png", "description"=>"Because it never removes its skull helmet, no one has ever seen this Pokémon's real face."}, "commit"=>"conceal"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "pins" ("photo", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["photo", "http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png"], ["description", "Because it never removes its skull helmet, no one has ever seen this Pokémon's real face."], ["created_at", "2018-08-02 15:20:12.481742"], ["updated_at", "2018-08-02 15:20:12.481742"]]
+  [1m[35m (163.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins/10
+Completed 302 Found in 175ms (ActiveRecord: 165.6ms)
+
+
+Started GET "/pins/10" for 127.0.0.1 at 2018-08-02 11:20:12 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.6ms)
+  Rendered share/_navbar.html.erb (4.1ms)
+Completed 200 OK in 49ms (Views: 45.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 11:20:16 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.5ms)
+  Rendered share/_navbar.html.erb (4.5ms)
+Completed 200 OK in 63ms (Views: 59.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 11:20:20 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (6.2ms)
+  Rendered pins/new.html.erb within layouts/application (8.8ms)
+  Rendered share/_navbar.html.erb (3.7ms)
+Completed 200 OK in 55ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 11:22:27 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (5.5ms)
+  Rendered pins/new.html.erb within layouts/application (10.4ms)
+  Rendered share/_navbar.html.erb (4.2ms)
+Completed 200 OK in 63ms (Views: 60.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 11:24:56 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (7.4ms)
+  Rendered pins/new.html.erb within layouts/application (10.9ms)
+  Rendered share/_navbar.html.erb (4.6ms)
+Completed 200 OK in 66ms (Views: 63.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2018-08-02 11:26:08 -0400
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uIaU47xUf5RDe+IsT74CDKBOPv9RccFXPySOC8isIzlnFgQaMMdBoHIec8bdtNm04oXP+XjQTxNTF4PjOamIcA==", "pin"=>{"photo"=>"http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png", "description"=>"Because it never removes its skull helmet, no one has ever seen this Pokémon's real face."}, "commit"=>"conceal"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "pins" ("photo", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["photo", "http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png"], ["description", "Because it never removes its skull helmet, no one has ever seen this Pokémon's real face."], ["created_at", "2018-08-02 15:26:08.462505"], ["updated_at", "2018-08-02 15:26:08.462505"]]
+  [1m[35m (157.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins/11
+Completed 302 Found in 168ms (ActiveRecord: 159.8ms)
+
+
+Started GET "/pins/11" for 127.0.0.1 at 2018-08-02 11:26:08 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.2ms)
+  Rendered share/_navbar.html.erb (4.9ms)
+Completed 200 OK in 51ms (Views: 46.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 11:26:59 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (8.9ms)
+  Rendered share/_navbar.html.erb (4.7ms)
+Completed 200 OK in 67ms (Views: 64.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 11:27:02 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_form.html.erb (6.3ms)
+  Rendered pins/new.html.erb within layouts/application (9.0ms)
+  Rendered share/_navbar.html.erb (4.0ms)
+Completed 200 OK in 67ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 11:27:05 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (9.1ms)
+  Rendered share/_navbar.html.erb (5.7ms)
+Completed 200 OK in 72ms (Views: 69.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 11:27:39 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/new.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial pins/_form, application/_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vicente/Desktop/pinterest/app/views"
+):
+    3: 	<h1>New Pin</h1>
+    4: 	<div class="row">
+    5: 		<div class="col-md-6">
+    6: 			<%= render 'form', pin: @pin %>
+    7: 
+    8: 			<%= link_to 'Back', pins_path %>
+    9: 		</div>
+  
+app/views/pins/new.html.erb:6:in `_app_views_pins_new_html_erb___980382134684694889_69809964181400'
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.3ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.4ms)
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 11:28:48 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/new.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial pins/_form, application/_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vicente/Desktop/pinterest/app/views"
+):
+    3: 	<h1>New Pin</h1>
+    4: 	<div class="row">
+    5: 		<div class="col-md-6">
+    6: 			<%= render 'form', pin: @pin %>
+    7: 
+    8: 			<%= link_to 'Back', pins_path %>
+    9: 		</div>
+  
+app/views/pins/new.html.erb:6:in `_app_views_pins_new_html_erb___980382134684694889_69810108994780'
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.7ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.0ms)
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 11:29:19 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (6.7ms)
+  Rendered pins/new.html.erb within layouts/application (9.6ms)
+  Rendered share/_navbar.html.erb (4.8ms)
+Completed 200 OK in 67ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 11:29:24 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (10.8ms)
+  Rendered share/_navbar.html.erb (4.5ms)
+Completed 200 OK in 85ms (Views: 81.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pins/8/edit" for 127.0.0.1 at 2018-08-02 11:29:26 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_formEdit.html.erb (0.8ms)
+  Rendered pins/edit.html.erb within layouts/application (5.2ms)
+  Rendered share/_navbar.html.erb (4.3ms)
+Completed 200 OK in 72ms (Views: 67.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/8/edit" for 127.0.0.1 at 2018-08-02 11:30:21 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_formEdit.html.erb (0.9ms)
+  Rendered pins/edit.html.erb within layouts/application (4.0ms)
+  Rendered share/_navbar.html.erb (5.8ms)
+Completed 200 OK in 66ms (Views: 61.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/8/edit" for 127.0.0.1 at 2018-08-02 11:30:42 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (6.0ms)
+  Rendered pins/edit.html.erb within layouts/application (9.8ms)
+  Rendered share/_navbar.html.erb (5.8ms)
+Completed 200 OK in 72ms (Views: 68.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/8/edit" for 127.0.0.1 at 2018-08-02 11:31:12 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_formEdit.html.erb (6.2ms)
+  Rendered pins/edit.html.erb within layouts/application (8.9ms)
+  Rendered share/_navbar.html.erb (4.2ms)
+Completed 200 OK in 71ms (Views: 65.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 11:31:25 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (10.4ms)
+  Rendered share/_navbar.html.erb (3.6ms)
+Completed 200 OK in 100ms (Views: 96.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 11:31:28 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (5.5ms)
+  Rendered pins/new.html.erb within layouts/application (7.7ms)
+  Rendered share/_navbar.html.erb (3.5ms)
+Completed 200 OK in 54ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 11:38:30 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (6.3ms)
+  Rendered pins/new.html.erb within layouts/application (8.8ms)
+  Rendered share/_navbar.html.erb (4.6ms)
+Completed 200 OK in 61ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2018-08-02 11:38:37 -0400
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OxhtHuM3OavdNVHGkGoCxrvOltiK7+iZBTv9wOAtxsvkiP3nb6QHn+xQwCwCYNl++QVn3qNOZt1pCPAoEShtgg==", "pin"=>{"photo"=>"http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png", "description"=>"Because it never removes its skull helmet, no one has ever seen this Pokémon's real face."}, "Update"=>""}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[32mINSERT INTO "pins" ("photo", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["photo", "http://static.pokemonpets.com/images/monsters-images-300-300/2104-Shiny-Cubone.png"], ["description", "Because it never removes its skull helmet, no one has ever seen this Pokémon's real face."], ["created_at", "2018-08-02 15:38:37.236025"], ["updated_at", "2018-08-02 15:38:37.236025"]]
+  [1m[35m (185.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins/12
+Completed 302 Found in 198ms (ActiveRecord: 188.2ms)
+
+
+Started GET "/pins/12" for 127.0.0.1 at 2018-08-02 11:38:37 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.1ms)
+  Rendered share/_navbar.html.erb (3.9ms)
+Completed 200 OK in 51ms (Views: 47.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 11:39:58 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (10.5ms)
+  Rendered share/_navbar.html.erb (5.2ms)
+Completed 200 OK in 65ms (Views: 61.6ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/pins/12" for 127.0.0.1 at 2018-08-02 11:40:04 -0400
+Processing by PinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GlyROwQXq32wSIwx4Po+SIWNMuBxgPEzomrWhJ1FwhrFzAHCiISVSYEtHdty8OXwx0bD5lghf3fOWdtsbEBpUw==", "id"=>"12"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "pins" WHERE "pins"."id" = ?[0m  [["id", 12]]
+  [1m[35m (83.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins
+Completed 302 Found in 95ms (ActiveRecord: 85.9ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 11:40:04 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.6ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (8.6ms)
+  Rendered share/_navbar.html.erb (4.5ms)
+Completed 200 OK in 64ms (Views: 60.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 11:40:06 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.9ms)
+  Rendered share/_navbar.html.erb (4.2ms)
+Completed 200 OK in 62ms (Views: 58.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 11:40:08 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (8.8ms)
+  Rendered share/_navbar.html.erb (4.6ms)
+Completed 200 OK in 68ms (Views: 65.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 11:41:09 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (6.5ms)
+  Rendered pins/new.html.erb within layouts/application (9.0ms)
+  Rendered share/_navbar.html.erb (3.8ms)
+Completed 200 OK in 57ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 11:47:16 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (6.2ms)
+  Rendered pins/new.html.erb within layouts/application (8.9ms)
+  Rendered share/_navbar.html.erb (4.0ms)
+Completed 200 OK in 63ms (Views: 60.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 11:49:07 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (6.7ms)
+  Rendered pins/new.html.erb within layouts/application (9.2ms)
+  Rendered share/_navbar.html.erb (4.9ms)
+Completed 200 OK in 74ms (Views: 71.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 11:54:40 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (4.9ms)
+  Rendered pins/new.html.erb within layouts/application (7.5ms)
+  Rendered share/_navbar.html.erb (4.5ms)
+Completed 200 OK in 58ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 11:55:44 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (6.4ms)
+  Rendered pins/new.html.erb within layouts/application (8.7ms)
+  Rendered share/_navbar.html.erb (5.0ms)
+Completed 200 OK in 58ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 11:56:58 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (5.7ms)
+  Rendered pins/new.html.erb within layouts/application (8.2ms)
+  Rendered share/_navbar.html.erb (4.5ms)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 12:03:32 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (3.0ms)
+  Rendered pins/new.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/vicente/Desktop/pinterest/app/views/pins/_formNew.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting ')'
+..., class: 'btn btn-primary' name: "Update") do @output_buffer...
+...                           ^~~~
+/home/vicente/Desktop/pinterest/app/views/pins/_formNew.html.erb:30: syntax error, unexpected ')', expecting keyword_end
+...tn btn-primary' name: "Update") do @output_buffer.safe_appen...
+...                              ^
+/home/vicente/Desktop/pinterest/app/views/pins/_formNew.html.erb:36: syntax error, unexpected keyword_end, expecting end-of-input
+ end 
+ ^~~):
+  
+app/views/pins/_formNew.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/pins/_formNew.html.erb:30: syntax error, unexpected ')', expecting keyword_end
+app/views/pins/_formNew.html.erb:36: syntax error, unexpected keyword_end, expecting end-of-input
+app/views/pins/new.html.erb:6:in `_app_views_pins_new_html_erb___980382134684694889_69810114825220'
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.7ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendering /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/vicente/.rvm/gems/ruby-2.5.1/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.3ms)
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 12:03:58 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (5.2ms)
+  Rendered pins/new.html.erb within layouts/application (7.8ms)
+  Rendered share/_navbar.html.erb (4.8ms)
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 12:04:40 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (6.1ms)
+  Rendered pins/new.html.erb within layouts/application (8.9ms)
+  Rendered share/_navbar.html.erb (4.3ms)
+Completed 200 OK in 62ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 12:04:47 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (8.3ms)
+  Rendered share/_navbar.html.erb (4.8ms)
+Completed 200 OK in 59ms (Views: 56.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 12:04:59 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (10.9ms)
+  Rendered share/_navbar.html.erb (3.6ms)
+Completed 200 OK in 70ms (Views: 67.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2018-08-02 12:05:04 -0400
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XLYIb9T3ViZbNhZ/AnJHQm+W7G40PmSEjiwEZ7L4U/GDJpiWWGRoEmpTh5WQeJz6LV0daB2f6sDiHwmPQ/34uA==", "pin"=>{"photo"=>"", "description"=>""}, "Update"=>""}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (6.1ms)
+  Rendered pins/new.html.erb within layouts/application (8.4ms)
+  Rendered share/_navbar.html.erb (4.5ms)
+Completed 200 OK in 69ms (Views: 61.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 12:06:19 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (8.0ms)
+  Rendered share/_navbar.html.erb (4.0ms)
+Completed 200 OK in 58ms (Views: 54.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 12:06:23 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (6.3ms)
+  Rendered pins/new.html.erb within layouts/application (8.8ms)
+  Rendered share/_navbar.html.erb (3.5ms)
+Completed 200 OK in 54ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 12:06:49 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (7.4ms)
+  Rendered pins/new.html.erb within layouts/application (9.9ms)
+  Rendered share/_navbar.html.erb (4.2ms)
+Completed 200 OK in 62ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 12:07:03 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (6.0ms)
+  Rendered pins/new.html.erb within layouts/application (8.9ms)
+  Rendered share/_navbar.html.erb (3.8ms)
+Completed 200 OK in 61ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 12:07:14 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (5.4ms)
+  Rendered pins/new.html.erb within layouts/application (7.5ms)
+  Rendered share/_navbar.html.erb (4.8ms)
+Completed 200 OK in 70ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 12:07:16 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (5.9ms)
+  Rendered pins/new.html.erb within layouts/application (8.3ms)
+  Rendered share/_navbar.html.erb (4.0ms)
+Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 12:07:24 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (5.4ms)
+  Rendered pins/new.html.erb within layouts/application (8.4ms)
+  Rendered share/_navbar.html.erb (3.6ms)
+Completed 200 OK in 59ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 12:07:25 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (5.4ms)
+  Rendered pins/new.html.erb within layouts/application (8.6ms)
+  Rendered share/_navbar.html.erb (3.6ms)
+Completed 200 OK in 59ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 12:07:34 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (6.4ms)
+  Rendered pins/new.html.erb within layouts/application (9.2ms)
+  Rendered share/_navbar.html.erb (4.2ms)
+Completed 200 OK in 61ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 12:07:36 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (12.4ms)
+  Rendered share/_navbar.html.erb (3.9ms)
+Completed 200 OK in 68ms (Views: 64.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 12:09:21 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (10.8ms)
+  Rendered share/_navbar.html.erb (3.6ms)
+Completed 200 OK in 62ms (Views: 58.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 12:09:49 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.4ms)
+  Rendered share/_navbar.html.erb (5.0ms)
+Completed 200 OK in 60ms (Views: 56.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 12:10:44 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.6ms)
+  Rendered share/_navbar.html.erb (5.1ms)
+Completed 200 OK in 59ms (Views: 55.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 12:11:44 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (9.0ms)
+  Rendered share/_navbar.html.erb (4.9ms)
+Completed 200 OK in 67ms (Views: 64.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/pins/11" for 127.0.0.1 at 2018-08-02 12:11:48 -0400
+Processing by PinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+oivnY1cmBDBn/KYQGiMMxozcylfjWZgObGcZaMGtd0lGD9kAc+mJPD6Y3LSYleLWPiCL3Ys6CRVgpGNUgMelA==", "id"=>"11"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "pins" WHERE "pins"."id" = ?[0m  [["id", 11]]
+  [1m[35m (120.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins
+Completed 302 Found in 129ms (ActiveRecord: 121.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 12:11:48 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (7.7ms)
+  Rendered share/_navbar.html.erb (3.9ms)
+Completed 200 OK in 76ms (Views: 72.5ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/pins/10" for 127.0.0.1 at 2018-08-02 12:11:52 -0400
+Processing by PinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Mz2fIdJACXH/gFw5oW0eumRVcS3MHkO/lSLvwgTMwFvsrQ/YXtM3Rc7lzdMzZ8UCJp6AK+W/zfv5EeIq9clrEg==", "id"=>"10"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "pins" WHERE "pins"."id" = ?[0m  [["id", 10]]
+  [1m[35m (58.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins
+Completed 302 Found in 69ms (ActiveRecord: 59.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 12:11:52 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (7.0ms)
+  Rendered share/_navbar.html.erb (4.9ms)
+Completed 200 OK in 61ms (Views: 58.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/pins/9" for 127.0.0.1 at 2018-08-02 12:11:55 -0400
+Processing by PinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yOak/F/ovWikfIX39VXeplGmBzSqYLKXCE2Dwbcf+XwXdjQF03uDXJUZFB1nXwUeE232MoPBPNNkfo4pRhpSNQ==", "id"=>"9"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[31mDELETE FROM "pins" WHERE "pins"."id" = ?[0m  [["id", 9]]
+  [1m[35m (79.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pins
+Completed 302 Found in 91ms (ActiveRecord: 82.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 12:11:55 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.1ms)
+  Rendered share/_navbar.html.erb (3.5ms)
+Completed 200 OK in 59ms (Views: 55.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/8" for 127.0.0.1 at 2018-08-02 12:11:56 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.2ms)
+  Rendered share/_navbar.html.erb (5.3ms)
+Completed 200 OK in 59ms (Views: 55.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/8/edit" for 127.0.0.1 at 2018-08-02 12:12:00 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_formEdit.html.erb (6.6ms)
+  Rendered pins/edit.html.erb within layouts/application (9.8ms)
+  Rendered share/_navbar.html.erb (4.0ms)
+Completed 200 OK in 66ms (Views: 61.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 12:12:04 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.8ms)
+  Rendered share/_navbar.html.erb (3.7ms)
+Completed 200 OK in 74ms (Views: 71.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 12:12:06 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (6.2ms)
+  Rendered pins/new.html.erb within layouts/application (8.9ms)
+  Rendered share/_navbar.html.erb (3.3ms)
+Completed 200 OK in 55ms (Views: 51.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 12:14:22 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_formEdit.html.erb (7.8ms)
+  Rendered pins/edit.html.erb within layouts/application (10.8ms)
+  Rendered share/_navbar.html.erb (5.0ms)
+Completed 200 OK in 67ms (Views: 63.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 12:14:55 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_formEdit.html.erb (5.5ms)
+  Rendered pins/edit.html.erb within layouts/application (7.9ms)
+  Rendered share/_navbar.html.erb (4.8ms)
+Completed 200 OK in 58ms (Views: 54.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 12:15:29 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_formEdit.html.erb (8.8ms)
+  Rendered pins/edit.html.erb within layouts/application (11.5ms)
+  Rendered share/_navbar.html.erb (3.9ms)
+Completed 200 OK in 64ms (Views: 60.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 12:15:46 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_formEdit.html.erb (8.3ms)
+  Rendered pins/edit.html.erb within layouts/application (11.3ms)
+  Rendered share/_navbar.html.erb (4.9ms)
+Completed 200 OK in 78ms (Views: 73.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 12:15:59 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_formEdit.html.erb (6.5ms)
+  Rendered pins/edit.html.erb within layouts/application (8.9ms)
+  Rendered share/_navbar.html.erb (4.2ms)
+Completed 200 OK in 61ms (Views: 56.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 12:16:27 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_formEdit.html.erb (5.3ms)
+  Rendered pins/edit.html.erb within layouts/application (7.5ms)
+  Rendered share/_navbar.html.erb (4.9ms)
+Completed 200 OK in 57ms (Views: 53.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 12:17:28 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_formEdit.html.erb (6.2ms)
+  Rendered pins/edit.html.erb within layouts/application (8.9ms)
+  Rendered share/_navbar.html.erb (3.6ms)
+Completed 200 OK in 62ms (Views: 57.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 12:17:34 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.3ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.2ms)
+  Rendered share/_navbar.html.erb (5.0ms)
+Completed 200 OK in 59ms (Views: 55.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 12:17:37 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.2ms)
+  Rendered share/_navbar.html.erb (4.8ms)
+Completed 200 OK in 60ms (Views: 57.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2018-08-02 12:17:52 -0400
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/show.html.erb within layouts/application
+  Rendered pins/show.html.erb within layouts/application (2.6ms)
+  Rendered share/_navbar.html.erb (3.7ms)
+Completed 200 OK in 63ms (Views: 59.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 12:17:56 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (7.3ms)
+  Rendered share/_navbar.html.erb (3.5ms)
+Completed 200 OK in 67ms (Views: 64.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 12:17:57 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_formEdit.html.erb (7.4ms)
+  Rendered pins/edit.html.erb within layouts/application (10.4ms)
+  Rendered share/_navbar.html.erb (4.5ms)
+Completed 200 OK in 70ms (Views: 65.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 12:17:59 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.0ms)
+  Rendered share/_navbar.html.erb (4.3ms)
+Completed 200 OK in 62ms (Views: 59.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 12:18:02 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (6.1ms)
+  Rendered pins/new.html.erb within layouts/application (8.6ms)
+  Rendered share/_navbar.html.erb (3.6ms)
+Completed 200 OK in 68ms (Views: 65.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 12:19:05 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (5.0ms)
+  Rendered pins/new.html.erb within layouts/application (8.9ms)
+  Rendered share/_navbar.html.erb (4.7ms)
+Completed 200 OK in 62ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 12:19:07 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (5.8ms)
+  Rendered share/_navbar.html.erb (5.2ms)
+Completed 200 OK in 63ms (Views: 60.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 12:19:08 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_formEdit.html.erb (6.0ms)
+  Rendered pins/edit.html.erb within layouts/application (9.5ms)
+  Rendered share/_navbar.html.erb (4.8ms)
+Completed 200 OK in 68ms (Views: 62.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 12:19:21 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.3ms)
+  Rendered share/_navbar.html.erb (4.7ms)
+Completed 200 OK in 63ms (Views: 60.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/4/edit" for 127.0.0.1 at 2018-08-02 12:19:23 -0400
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.2ms)[0m  [1m[34mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pins/edit.html.erb within layouts/application
+  Rendered pins/_formEdit.html.erb (7.4ms)
+  Rendered pins/edit.html.erb within layouts/application (10.2ms)
+  Rendered share/_navbar.html.erb (4.3ms)
+Completed 200 OK in 68ms (Views: 64.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 12:19:39 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.4ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.1ms)
+  Rendered share/_navbar.html.erb (3.9ms)
+Completed 200 OK in 65ms (Views: 62.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2018-08-02 12:19:44 -0400
+Processing by PinsController#new as HTML
+  Rendering pins/new.html.erb within layouts/application
+  Rendered pins/_formNew.html.erb (10.1ms)
+  Rendered pins/new.html.erb within layouts/application (12.9ms)
+  Rendered share/_navbar.html.erb (3.8ms)
+Completed 200 OK in 67ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2018-08-02 12:19:45 -0400
+Processing by PinsController#index as HTML
+  Rendering pins/index.html.erb within layouts/application
+  [1m[36mPin Load (0.5ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (6.5ms)
+  Rendered share/_navbar.html.erb (4.7ms)
+Completed 200 OK in 67ms (Views: 64.2ms | ActiveRecord: 0.5ms)
+
+

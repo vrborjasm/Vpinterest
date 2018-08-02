@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="container">
+	<div class="row">
+	  <div class="col-md-4 offset-md-4">
+	    <div class="img-thumbnail">
+			<%= image_tag(@pin.photo, :class => 'img-fluid mx-auto d-block' ) %>
+	      	<div>
+			  <span><strong>Description:</strong></span>
+			  <%= @pin.description %>
+	      	</div>
+	      	<div class="text-center">
+	      	<%= link_to edit_pin_path(@pin) do %> 
+				<button class="btn btn-primary"><i class="fas fa-edit"></i></button>
+	      	<% end %>
+			<%= link_to pins_path do %>
+				<button class="btn btn-primary"><i class="fas fa-undo-alt"></i></button>
+			<% end %>
+			</div>
+	    </div>
+	  </div>
+	</div>
+</div>
