@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+	<a class="navbar-brand" href="#"><%= image_tag("Logo_Pinterest.png", width: '28px') %></a>
+	<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+		<form class="form-inline my-2 my-lg-0 mr-auto">
+  			<input id= "search" class="form-control" type="search" placeholder="Search..." aria-label="Search">
+		</form>
+		<ul class="navbar-nav mt-2 mt-lg-0 ">
+			<% if current_user.nil? %>
+				<li class="nav-item active">
+					<a class="nav-link mr-5" href="#"><i class="fas fa-home fa-2x"></i> Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li>
+					<div class="btn-group">
+						<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<%= image_tag("user.png", width: '36px') %> <span class="align-bottom">User</span> <span class="sr-only">(current)</span>
+						</button>
+						<div class="dropdown-menu">
+							<%= render "devise/sessions/new" %>
+						</div>
+					</div>
+				</li>
+			<% else %>
+			<li class="nav-item active">
+    				<a class="nav-link mr-5" href="#"><i class="fas fa-home fa-2x"></i> Home <span class="sr-only">(current)</span></a>
+  				</li>
+				<li class="nav-item active">
+    				<a class="nav-link mr-5" href="#"><%= image_tag(current_user.user_photo, :id => 'userImg') %> <span class="align-bottom"><%= current_user.email %></span> <span class="sr-only">(current)</span></a>
+  				<li class="nav-item active">
+  					<a class="nav-link mr-5" href="<%= destroy_user_session_path %>" data-method="delete"><i class="fas fa-sign-out-alt fa-2x"></i> Salir </a>
+  				</li>
+  			<% end %>
+		</ul>	
+	</div>
+</nav>
